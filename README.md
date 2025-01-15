@@ -31,6 +31,7 @@ df_makanan.head()
 ```
 
 ::: OUTPUT
+
 Country	Alcoholic Beverages	Animal fats	Animal Products	Aquatic Products, Other	Cereals - Excluding Beer	Eggs	Fish, Seafood	Fruits - Excluding Wine	Meat	...	Vegetables	Vegetal Products	Obesity	Undernourished	Confirmed	Deaths	Recovered	Active	Population	Unit (all except Population)
 0	Afghanistan	0.0014	0.1973	9.4341	0.0	24.8097	0.2099	0.0350	5.3495	1.2020	...	6.7642	40.5645	4.5	29.8	0.142134	0.006186	0.123374	0.012574	38928000.0	%
 1	Albania	1.6719	0.1357	18.7684	0.0	5.7817	0.5815	0.2126	6.7861	1.8845	...	11.7753	31.2304	22.3	6.2	2.967301	0.050951	1.792636	1.123714	2838000.0	%
@@ -75,6 +76,7 @@ df_kategori.head()
 ```
 
 ::: OUTPUT
+
 ``` json
 Categories	Items
 0	Alcoholic Beverages	Alcohol, Non-Food; Beer; Beverages, Alcoholic;...
@@ -97,6 +99,7 @@ print(f'Bukan Makanan  : {kolom_non_supplier}')
 ```
 
 OUTPUT
+
     Semua Kolom : ['Country', 'Alcoholic Beverages', 'Animal fats', 'Animal Products', 'Aquatic Products, Other', 'Cereals - Excluding Beer', 'Eggs', 'Fish, Seafood', 'Fruits - Excluding Wine', 'Meat', 'Milk - Excluding Butter', 'Miscellaneous', 'Offals', 'Oilcrops', 'Pulses', 'Spices', 'Starchy Roots', 'Stimulants', 'Sugar & Sweeteners', 'Sugar Crops', 'Treenuts', 'Vegetable Oils', 'Vegetables', 'Vegetal Products', 'Obesity', 'Undernourished', 'Confirmed', 'Deaths', 'Recovered', 'Active', 'Population', 'Unit (all except Population)'] 
 
 
@@ -212,6 +215,7 @@ df3
 ```
 
 ::: OUTPUT
+
 Country	Alcoholic Beverages_food	Animal fats_food	Animal Products_food	Aquatic Products, Other_food	Cereals - Excluding Beer_food	Eggs_food	Fish, Seafood_food	Fruits - Excluding Wine_food	Meat_food	...	Vegetables_fat_fat_fat_fat	Vegetal Products_fat_fat_fat_fat	Obesity	Undernourished	Confirmed	Deaths	Recovered	Active	Population	Unit (all except Population)
 0	Afghanistan	0.0014	0.1973	9.4341	0.0000	24.8097	0.2099	0.0350	5.3495	1.2020	...	0.3593	28.3684	4.5	29.8	0.142134	0.006186	0.123374	0.012574	38928000.0	%
 1	Albania	1.6719	0.1357	18.7684	0.0000	5.7817	0.5815	0.2126	6.7861	1.8845	...	0.6503	17.9998	22.3	6.2	2.967301	0.050951	1.792636	1.123714	2838000.0	%
@@ -256,9 +260,9 @@ print('Indonesia urutan : {}'.format(negara))
 ```
 
 ::: OUTPUT
+
     Indonesia urutan : 83
-:::
-:::
+
 
 ``` python
 meninggal_persen = list(df_sort['Deaths'][df_sort['Country']=='Indonesia'])[0]
@@ -269,6 +273,7 @@ print(f'Jumlah yang meninggal di Indonesia ada {round(meninggal)} orang.')
 ```
 
 ::: OUTPUT
+
     Jumlah yang meninggal di Indonesia ada 0.0115526295% dari jumlah populasi.
     Jumlah yang meninggal di Indonesia ada 31393 orang.
 
@@ -286,6 +291,7 @@ groupby_confirmed
 ```
 
 ::: OUTPUT
+
 ``` json
 {"summary":"{\n  \"name\": \"groupby_confirmed\",\n  \"rows\": 5,\n  \"fields\": [\n    {\n      \"column\": \"Confirmed Category\",\n      \"properties\": {\n        \"dtype\": \"category\",\n        \"num_unique_values\": 5,\n        \"samples\": [\n          \"Tidak Banyak\",\n          \"Sangat Banyak\",\n          \"Sedang\"\n        ],\n        \"semantic_type\": \"\",\n        \"description\": \"\"\n      }\n    },\n    {\n      \"column\": \"Obesity\",\n      \"properties\": {\n        \"dtype\": \"number\",\n        \"std\": 6.382033532010137,\n        \"min\": 12.136363636363637,\n        \"max\": 24.903030303030302,\n        \"num_unique_values\": 5,\n        \"samples\": [\n          12.136363636363637,\n          24.903030303030302,\n          19.24375\n        ],\n        \"semantic_type\": \"\",\n        \"description\": \"\"\n      }\n    },\n    {\n      \"column\": \"Meat\",\n      \"properties\": {\n        \"dtype\": \"number\",\n        \"std\": 1.4379305356348795,\n        \"min\": 6.856963636363636,\n        \"max\": 10.415409090909092,\n        \"num_unique_values\": 5,\n        \"samples\": [\n          6.856963636363636,\n          10.415409090909092,\n          9.743353125\n        ],\n        \"semantic_type\": \"\",\n        \"description\": \"\"\n      }\n    },\n    {\n      \"column\": \"Fruits - Excluding Wine\",\n      \"properties\": {\n        \"dtype\": \"number\",\n        \"std\": 0.18627634088335995,\n        \"min\": 0.4112939393939394,\n        \"max\": 0.865030303030303,\n        \"num_unique_values\": 5,\n        \"samples\": [\n          0.865030303030303,\n          0.4112939393939394,\n          0.5181125\n        ],\n        \"semantic_type\": \"\",\n        \"description\": \"\"\n      }\n    },\n    {\n      \"column\": \"Fish, Seafood\",\n      \"properties\": {\n        \"dtype\": \"number\",\n        \"std\": 0.1665288460625058,\n        \"min\": 0.5589242424242423,\n        \"max\": 0.9674787878787878,\n        \"num_unique_values\": 5,\n        \"samples\": [\n          0.9608242424242425,\n          0.5589242424242423,\n          0.800271875\n        ],\n        \"semantic_type\": \"\",\n        \"description\": \"\"\n      }\n    },\n    {\n      \"column\": \"Animal Products\",\n      \"properties\": {\n        \"dtype\": \"number\",\n        \"std\": 4.832726472976786,\n        \"min\": 15.073281818181817,\n        \"max\": 26.164790909090907,\n        \"num_unique_values\": 5,\n        \"samples\": [\n          15.073281818181817,\n          26.164790909090907,\n          20.31525\n        ],\n        \"semantic_type\": \"\",\n        \"description\": \"\"\n      }\n    },\n    {\n      \"column\": \"Vegetal Products\",\n      \"properties\": {\n        \"dtype\": \"number\",\n        \"std\": 4.832999170973168,\n        \"min\": 23.83529393939394,\n        \"max\": 34.92687575757576,\n        \"num_unique_values\": 5,\n        \"samples\": [\n          34.92687575757576,\n          23.83529393939394,\n          29.684996875\n        ],\n        \"semantic_type\": \"\",\n        \"description\": \"\"\n      }\n    }\n  ]\n}","type":"dataframe","variable_name":"groupby_confirmed"}
 ```
